@@ -78,6 +78,11 @@ h6 {
 .page {
     flex: 1 1 auto;
 }
+.page__main {
+}
+.page__decor {
+    margin: -200px;
+}
 /*--------------------*/
 .wrapper {
     min-height: 100%;
@@ -88,8 +93,9 @@ h6 {
 ._container {
     max-width: 1440px;
     padding: 0 47px 0 60px;
+    background-color: #f7f7f7;
     margin: 0 auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
@@ -104,7 +110,6 @@ h6 {
 }
 .header__container {
     min-height: 88px;
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     /* margin: 21px 0 0 0; */
@@ -134,7 +139,7 @@ h6 {
 }
 .menu {
     display: flex;
-    margin: 0 0 0 14px;
+    margin: 0 0 0 221px;
 }
 .menu__item {
     color: #000;
@@ -144,22 +149,22 @@ h6 {
     line-height: calc (30 / 20 * 100%);
 }
 .menu__item:nth-child(1) {
-    margin: 30px 57px 0 0;
+    margin: 35px 63px 0 0;
 }
 .menu__item:nth-child(2) {
-    margin: 28px 57px 0 0;
+    margin: 33px 66px 0 0;
 }
 .menu__item:nth-child(3) {
-    margin: 27px 57px 0 0;
+    margin: 32px 67px 0 0;
 }
 .menu__item:nth-child(4) {
-    margin: 25px 0 0 0;
+    margin: 30px 0 0 0;
 }
 /* .menu__item:not(:last-child) {
     margin: 0  0 0;
 } */
 .top-hearts {
-    margin: 0 0 0 221px;
+    margin: 0 0 0 295px;
 }
 .top-hearts img {
     width: 88px;
@@ -252,12 +257,10 @@ h6 {
     }
 }
 /*--------------------*/
-.page__main {
-    /* position: relative; */
-}
+
 .main {
-    /* position: relative; */
 }
+
 .main__container {
 }
 .main__body {
@@ -266,13 +269,30 @@ h6 {
 }
 .main__column {
     flex: 0 1 50%;
+    position: relative;
+}
+.decor__left {
+    position: absolute;
+    top: 87%;
+    left: 2%;
+    width: 30px;
+    height: 174px;
+    background-color: #26bbec;
+}
+.decor__right {
+    position: absolute;
+    top: 40%;
+    left: 93.5%;
+    width: 30px;
+    height: 174px;
+    background-color: #ee5281;
 }
 .brand {
-    margin: 53px;
     width: 389px;
     height: 284px;
-    background: url("/img/tetris_fullfilled.png") 0 14px / 92px 92px no-repeat,
-        url("/img/tetris.png") 239px 217px / 94px 70px no-repeat;
+    margin: 0 0 0 53px;
+    background: url("/img/tetris_fullfilled.png") 0 0 / 92px 92px no-repeat,
+        url("/img/tetris.png") 239px 214px / 94px 70px no-repeat;
     position: relative;
 }
 .brand__game {
@@ -306,7 +326,7 @@ h6 {
     width: 100%;
     height: 100%;
     top: 142px;
-    left: 184px;
+    left: 185px;
     font-family: "Quicksand";
     font-style: normal;
     font-weight: 700;
@@ -315,16 +335,44 @@ h6 {
     color: #ffffff;
     -webkit-text-stroke: 3px #000000;
 }
+.button {
+    display: flex;
+    align-items: center;
+    margin: 133px 0 0 155px;
+    padding: 0 0 117px 0;
+}
+.button__started {
+    display: inline-block;
+    width: 167px;
+    height: 63px;
+    padding: 17px 36px 21px;
+    background-color: #ee5281;
+    color: #72404f;
+    -webkit-text-stroke: 1px #fff;
+    border-radius: 38px;
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(30 / 24 * 100%);
+}
+.button__bullets {
+    margin: 0 0 0 41px;
+    width: 68px;
+    height: 68px;
+}
 
 .description {
-    margin: 39px;
+    overflow: visible;
+    margin: 0 0 0 39px;
     width: 442px;
     height: 520px;
-    background: url("/img/mushroom.png") 0 144px / 199px 199px no-repeat,
-        url("/img/display.png") 110px 25px / 303px 303px no-repeat;
+    background: url("/img/mushroom.png") 0 92px / 199px 199px no-repeat,
+        url("/img/display.png") 110px 0px / 303px 255px no-repeat;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    position: relative;
 }
 .description__text {
     width: 342px;
@@ -334,4 +382,62 @@ h6 {
     font-size: 13px;
     line-height: calc(20 / 13 * 100%);
     text-align: justify;
+    margin: 0 0 85px 0;
 }
+
+@media (max-width: 1339px) {
+    .decor__left {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        width: 10px;
+        height: 174px;
+        background-color: #26bbec;
+    }
+    .decor__right {
+        position: absolute;
+        top: 87%;
+        left: 93.5%;
+        width: 10px;
+        height: 174px;
+        background-color: #ee5281;
+    }
+}
+@media (max-width: 992px) {
+    .main__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 104px 0 0 0;
+    }
+    .main__column {
+        flex: 0 1 100%;
+    }
+    .decor__left {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        width: 10px;
+        height: 174px;
+        background-color: #26bbec;
+    }
+    .decor__right {
+        position: absolute;
+        top: 87%;
+        left: 93.5%;
+        width: 10px;
+        height: 174px;
+        background-color: #ee5281;
+    }
+}
+@media (max-width: 767px) {
+}
+/*--------------------*/
+
+/* .page__decor__container {
+    margin: 0 0 0 73px;
+    height: 457px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+} */
