@@ -387,20 +387,12 @@ h6 {
 
 @media (max-width: 1339px) {
     .decor__left {
-        position: absolute;
         top: 40%;
-        left: 2%;
-        width: 10px;
-        height: 174px;
-        background-color: #26bbec;
+        width: 20px;
     }
     .decor__right {
-        position: absolute;
         top: 87%;
-        left: 93.5%;
-        width: 10px;
-        height: 174px;
-        background-color: #ee5281;
+        width: 20px;
     }
 }
 @media (max-width: 992px) {
@@ -411,26 +403,29 @@ h6 {
         margin: 104px 0 0 0;
     }
     .main__column {
-        flex: 0 1 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .decor__left {
-        position: absolute;
-        top: 40%;
-        left: 2%;
-        width: 10px;
-        height: 174px;
-        background-color: #26bbec;
+        top: 37%;
+        width: 30px;
     }
     .decor__right {
-        position: absolute;
-        top: 87%;
-        left: 93.5%;
-        width: 10px;
-        height: 174px;
-        background-color: #ee5281;
+        top: 40%;
+        width: 30px;
     }
 }
 @media (max-width: 767px) {
+    .decor__left {
+        top: 87%;
+        width: 20px;
+    }
+    .decor__right {
+        top: -120%;
+        width: 20px;
+    }
 }
 /*--------------------*/
 
